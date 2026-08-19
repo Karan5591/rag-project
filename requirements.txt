@@ -1,0 +1,8 @@
+streamlit
+torch
+sentence-transformers
+docling
+pypdf
+psycopg[binary]
+pydantic-settings
+httpx

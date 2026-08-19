@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg18
+    container_name: rag-postgres
+    environment:
+      POSTGRES_USER: rag_user
+      POSTGRES_PASSWORD: rag_password
+      POSTGRES_DB: rag_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - rag_postgres_data:/var/lib/postgresql
+
+volumes:
+  rag_postgres_data:
